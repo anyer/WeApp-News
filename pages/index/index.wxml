@@ -1,0 +1,26 @@
+<!--index.wxml-->
+<!--<import src="../../template/menu.wxml" />-->
+
+<view class="container">
+  <!--<template is="menu"></template>-->
+  <view class="menu">
+    <scroll_view class="tabnavs" scroll-x="true">
+      <view wx:for="{{menu}}" id="{{item.id}}" class="tabnav"  bindtap="getTypeId">{{item.text}}</view>
+    </scroll_view>
+    <progress percent="100" stroke-width="2" active color="#3080c0"/>
+  </view>
+
+  <view class="news">
+    <view wx:for="{{newsData}}" class="new" bindtap="detail">
+      <view class="new_title">
+        <text class="title">{{item.title}}</text>      
+      </view>
+      <image class="img" src="{{item.thumbnail_pic_s}}"></image>
+      <view class="new_other">
+        <text class="author">{{item.author_name}}</text>
+        <!--<text class="date">{{item.date}}</text>-->
+        <!--<text class="author_name">{{item.author_name}}</text>-->
+      </view>
+    </view>
+  </view>
+</view>

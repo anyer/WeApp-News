@@ -1,0 +1,14 @@
+<!--
+  导航菜单模板  
+    tabnavs: list
+    item.pagePath: string
+    item.text: string
+-->
+<template name="menu">
+  <view class="menu">
+    <scroll_view class="tabnavs" scroll-x="true">
+      <view wx:for = "{{tabNavs}}" href="{{item.pagePath}}" class = "tabnav">{{item.text}}</view>
+    </scroll_view>
+    <progress percent="100" stroke-width="2" active color="#3080c0"/>
+  </view>
+</template>
